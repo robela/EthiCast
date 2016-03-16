@@ -1,0 +1,60 @@
+﻿@model EthioAct.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+@*<h2>@ViewBag.Title.</h2>*@
+<div class="loginColumns animated fadeInDown" style="padding-top: 60px;">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="font-bold">Welcome to Ethio-Act</h2>
+
+            <p>
+                Introduction paragraph
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div id="loginForm" class="ibox-content">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "m-t", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @required = "", @placeholder = "Username" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                    <div class="form-group">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @required = "", @placeholder = "password" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+
+                    <input type="submit" value="Log in" class="btn btn-primary block full-width m-b" />
+
+                    @*<div class="col-md-offset-2 checkbox ">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                </div>*@
+                    <a href="#">
+                        <small>Forgot password?</small>
+                    </a>
+                    <p class="text-muted text-center">
+                        <small>Do not have an account?</small>
+                    </p>
+                    @Html.ActionLink("Register", "Register", "", new { @class = "btn btn-sm btn-white btn-block" })
+                    <hr />
+
+                }
+                <div id="socialLoginForm">
+                    @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
+                </div>
+                <hr />
+            </div>
+        </div>
+       
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

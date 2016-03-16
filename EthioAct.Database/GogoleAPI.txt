@@ -1,0 +1,10 @@
+Client ID	
+849317458859-re4g26oelji921129c33jnrff95gds4v.apps.googleusercontent.com
+Email address	
+849317458859-re4g26oelji921129c33jnrff95gds4v@developer.gserviceaccount.com
+Client secret	
+Ih5M-f6_Yph7MHFsdUob8LB_
+Redirect URIs	
+https://www.example.com/oauth2callback
+JavaScript origins	
+https://www.example.com

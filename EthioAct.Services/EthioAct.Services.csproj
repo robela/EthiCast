@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EthioAct.Services</RootNamespace>
+    <AssemblyName>EthioAct.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MailSafer, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSafer.1.0.5.0\lib\net45\MailSafer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ShortGuid, Version=1.0.5061.38473, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShortGuid.1.0.0\lib\net45\ShortGuid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActingTypeService.cs" />
+    <Compile Include="ActorRequirementService.cs" />
+    <Compile Include="ActorsServices.cs" />
+    <Compile Include="ActorVsActingTypeService.cs" />
+    <Compile Include="ActorVsImageService.cs" />
+    <Compile Include="ActorVsTalentService.cs" />
+    <Compile Include="ActorVsVideoService.cs" />
+    <Compile Include="AddressService.cs" />
+    <Compile Include="CastingService.cs" />
+    <Compile Include="IActingTypeService.cs" />
+    <Compile Include="IActorRequirementService.cs" />
+    <Compile Include="IActorsService.cs" />
+    <Compile Include="IActorVsActingTypeService.cs" />
+    <Compile Include="IActorVsImageService.cs" />
+    <Compile Include="IActorVsTalentService.cs" />
+    <Compile Include="IActorVsVideoService.cs" />
+    <Compile Include="IAddressService.cs" />
+    <Compile Include="ICastingService.cs" />
+    <Compile Include="IImageService.cs" />
+    <Compile Include="ImageService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EthioAct.Data\EthioAct.Data.csproj">
+      <Project>{60548579-6695-485b-93d4-ea8bad5ed35c}</Project>
+      <Name>EthioAct.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EthioAct.Models\EthioAct.Models.csproj">
+      <Project>{85500874-691b-4d15-b9e3-efb7442b4a80}</Project>
+      <Name>EthioAct.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - EthioAct</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <!-- Add local styles, mostly for plugins css file -->
+    <!-- Add jQuery Style direct - used for jQGrid plugin -->
+    <link href="~/Content/theme/Scripts/plugins/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <!-- Primary Inspinia style -->
+    <link href="~/Content/theme/font-awesome/css1d4f.css?v=DWzYKC0jd6clsSeB4EkEn6OEx9vHam-xVWrDW9id9NI1" rel="stylesheet" />
+
+    <link href="~/Content/theme/Content/css0a6f.css?v=AUxUbpEf_UfTv9WM7O4tgpNJ9evXZIsYLWT02-Rk6581" rel="stylesheet" />
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+
+
+<body class="top-navigation">
+
+    <!-- Wrapper-->
+    <!-- PageClass give you ability to specify custom style for specific view based on action -->
+    <div id="wrapper" class="">
+
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg">
+
+            <!-- Top Navbar -->
+            <div class="row border-bottom white-bg">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+                        <a href="#" class="navbar-brand">Ethio-Act </a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="#">Menu item 1</a></li>
+                                    <li><a href="#">Menu item 2</a></li>
+                                    <li><a href="#">Menu item 3</a></li>
+                                    <li><a href="#">Menu item 4</a></li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                        
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Main view  -->
+
+
+
+            <div class="wrapper wrapper-content">
+                @RenderBody()
+            </div>
+
+
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="pull-right">
+                    EthioAct
+                </div>
+                <div>
+                    <strong>Copyright</strong> Ethio Cast &copy; 2015
+                </div>
+            </div>
+
+
+        </div>
+        <!-- End page wrapper-->
+
+    </div>
+    <!-- End wrapper-->
+    <!-- Section for main scripts render -->
+    <script src="~/Content/theme/bundles/jqueryc2b0.js?v=yMmPM1TxecYcoWtCWW3jYgH0fr9kiAasOfb-W5I001A1"></script>
+
+    <script src="~/Content/theme/bundles/bootstrap6dab.js?v=6F69ePQjyYoTsSTMs9YCaATNBbN2mbcwXjrwYRFN_Ys1"></script>
+
+    <script src="~/Content/theme/plugins/slimScroll62c9.js?v=iP5-0kNmqbq_-2peJRNgfNsaqPkGEpsx0UkaUEb9URU1"></script>
+
+    <script src="~/Content/theme/bundles/inspinia4a28.js?v=iTIoFN2spRS0OUAfaoh_pSxY-VPoZDlyhoQdbH8pDAc1"></script>
+
+
+    <!-- Skin config script - only for demo purpose-->
+    <script src="~/Content/theme/bundles/skinConfigfeb9.js?v=sbzNA1C986FTcLz6b7THwXKLpwhN_SMSc8EYYkYBjMg1"></script>
+
+
+    <!-- Handler for local scripts -->
+
+    
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+

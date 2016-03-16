@@ -1,0 +1,80 @@
+﻿@model EthioAct.Models.Models.Actor
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+<div style="width:80%">
+    <p style="float: right">
+        @Html.ActionLink("Edit", "Edit")
+    </p>
+    <h4> Basic Information</h4>
+    <table class="table">
+        <tr>
+            <td>Full Name:</td>
+            <td colspan="3">@Html.DisplayFor(m => m.firstName)+ " "+ @Html.DisplayFor(m => m.secondName) + " "+ @Html.DisplayFor(m => m.lastName)</td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td>@Html.DisplayFor(m => m.dateOfBirth)</td>
+            <td>Gender:</td>
+            <td>@Html.DisplayFor(m => m.gender)</td>
+        </tr>
+        <tr>
+            <td>Height:</td>
+            <td>@Html.DisplayFor(m => m.height) </td>
+            <td>Weight:</td>
+            <td>@Html.DisplayFor(m => m.weight) </td>
+        </tr>
+    </table>
+    </div>
+    <div style="width:80%">
+        <p style="float: right">
+            @Html.ActionLink("Edit", "Edit")
+        </p>
+        <h4> About Me (Overview)</h4>
+        <hr />
+        <p>
+            @Html.DisplayFor(m => m.aboutMe)
+        </p>
+    </div>
+<div style="width:80%">
+    <p style="float: right">
+        @Html.ActionLink("Add", "Edit")
+    </p>
+    <h4> Images</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.aboutMe)
+    </p>
+</div>
+<div style="width:80%">
+    <p style="float: right">
+        @Html.ActionLink("Add", "Edit")
+    </p>
+    <h4>My Videos</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.aboutMe)
+    </p>
+</div>
+<div style="width:80%">
+    <p style="float: right">
+        @Html.ActionLink("Add", "Edit")
+    </p>
+    <h4>Portfolio</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.aboutMe)
+    </p>
+</div>
+<div style="width:80%">
+    <p style="float: right">
+        @Html.ActionLink("Add", "Edit")
+    </p>
+    <h4>Education</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.educationLevel)
+    </p>
+</div>

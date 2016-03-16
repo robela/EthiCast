@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthioAct", "EthioAct\EthioAct.csproj", "{F4923938-B0BC-4BAF-BA75-00CA7C1590CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthioAct.Tests", "EthioAct.Tests\EthioAct.Tests.csproj", "{8D03B451-795B-49CA-982F-242B2A2FABCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{A42F9DE5-3D82-4309-9AD4-206E5A9729B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7838F5E4-EB1E-4072-8FF0-49F10D654F3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A576ADF1-C20C-4BC2-B844-75C5D1FE3FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthioAct.Data", "EthioAct.Data\EthioAct.Data.csproj", "{60548579-6695-485B-93D4-EA8BAD5ED35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthioAct.Models", "EthioAct.Models\EthioAct.Models.csproj", "{85500874-691B-4D15-B9E3-EFB7442B4A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthioAct.Services", "EthioAct.Services\EthioAct.Services.csproj", "{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EBD861D2-4339-41B4-B5DC-5032F3D98F6D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4E74DC1F-69C5-4CF5-9F99-A9639320F75D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4923938-B0BC-4BAF-BA75-00CA7C1590CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4923938-B0BC-4BAF-BA75-00CA7C1590CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4923938-B0BC-4BAF-BA75-00CA7C1590CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4923938-B0BC-4BAF-BA75-00CA7C1590CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D03B451-795B-49CA-982F-242B2A2FABCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D03B451-795B-49CA-982F-242B2A2FABCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D03B451-795B-49CA-982F-242B2A2FABCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D03B451-795B-49CA-982F-242B2A2FABCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60548579-6695-485B-93D4-EA8BAD5ED35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60548579-6695-485B-93D4-EA8BAD5ED35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60548579-6695-485B-93D4-EA8BAD5ED35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60548579-6695-485B-93D4-EA8BAD5ED35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85500874-691B-4D15-B9E3-EFB7442B4A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85500874-691B-4D15-B9E3-EFB7442B4A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85500874-691B-4D15-B9E3-EFB7442B4A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85500874-691B-4D15-B9E3-EFB7442B4A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F440AFAC-E38B-4890-B9C6-9C1C81BF382C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85500874-691B-4D15-B9E3-EFB7442B4A80} = {A42F9DE5-3D82-4309-9AD4-206E5A9729B4}
+		{60548579-6695-485B-93D4-EA8BAD5ED35C} = {7838F5E4-EB1E-4072-8FF0-49F10D654F3D}
+		{F440AFAC-E38B-4890-B9C6-9C1C81BF382C} = {A576ADF1-C20C-4BC2-B844-75C5D1FE3FEA}
+		{8D03B451-795B-49CA-982F-242B2A2FABCD} = {4E74DC1F-69C5-4CF5-9F99-A9639320F75D}
+	EndGlobalSection
+EndGlobal
